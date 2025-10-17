@@ -75,6 +75,38 @@ Example:
 ``` bash 
 PORT=4000 node index.js
 ```
+# API Documentation
+## Get /me
+Returns profile info and a random cat fact
+#### Example Response
+
+```json
+{
+  "status": "success",
+  "user": {
+    "email": "ezerichardugo@gmail.com",
+    "name": "Richard Eze",
+    "stack": "Node.js/Express"
+  },
+  "timestamp": "2025-10-16T12:34:56.789Z",
+  "fact": "Cats sleep 70% of their lives."
+}
+
+```
+#### Response Fields
+
+status → Always "success"
+
+user.email → Your personal email
+
+user.name → Your full name
+
+user.stack → Backend stack used (Node.js/Express)
+
+timestamp → Current UTC time in ISO 8601 format
+
+fact → Random cat fact from Cat Facts API
+
 ## Error Handling
 
 If the Cat Facts API is down or times out:
